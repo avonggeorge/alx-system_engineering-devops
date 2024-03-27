@@ -7,7 +7,7 @@
 # . 4 The path to the SSH private key that scp uses.
 
 #checks if number of argument is less than 3
-if [ $# -lt 3 ];
+if [ $# -lt 4 ];
 then
     #prints usage
     echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY";
