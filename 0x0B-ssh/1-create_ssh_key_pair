@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script creates an ssh key-gen with 4096 bits and has a passphrase as Betty
+
+ssh-keygen -f school -t rsa -b 4096 -N betty
