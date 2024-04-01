@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# script that confires an ubuntu machine with nginx and some config to the default file
+
+sudo apt update -y
+sudo apt-get install nginx -y
+# set NGINX to the port 80
+sudo sed -i 's/listen 8080/listen 80/g' /etc/nginx/sites-enabled/default
+
+echo "Hello World!" > file.txt
+sudo cp -r file.txt  /var/www/html/index.html; rm file.txt
+# create a custom http header for web-01
+sudo sed -i 's/server {/ server { add_header X-Served-By "516971-web-02";/g' /etc/nginx/sites-enabled/default
+sudo service nginx restart
