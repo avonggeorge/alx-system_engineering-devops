@@ -1,22 +1,12 @@
 #!/usr/bin/env bash
-# check if nginx is installed
-# Re-Configures an Nginx server to listen on port 80
+# Re-Configures an Nginx server to listen on port 80.
 
-Check=$(which nginx)
-if [ -z "$Check" ]
-then
-	echo "=== Installing Nginx ==="
-	sudo apt update -y
-	apt -y install nginx
-	echo "+++++++++++++++++++++++++"
-	echo "++++ Nginx Installed ++++"
-	echo "+++++++++++++++++++++++++"
-else
-	echo "$Check is Installed Already"
-fi
+# removes the default Nginx configuration file that is buggy
+rm /etc/nginx/sites-enabled/default
 
-# Set nginx to listen at port 80
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+# creates a symbolic link from the default configuration file to the sites-enabled directory to enable the server to listen on port 80
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-# start Nginx
+# restarts Nginx
 sudo service nginx restart
+
