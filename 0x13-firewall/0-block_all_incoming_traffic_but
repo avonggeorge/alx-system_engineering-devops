@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#Install Ucomplicated FireWall (UFW)
+# Configure basic firewall rules
+
+sudo apt-get -y update
+sudo apt-get -y upgrade
+
+#Install UFW
+sudo apt-get -y install ufw
+
+#Set incoming traffic to deny
+sudo ufw default deny incoming
+
+#Set outgoing traffic to allow
+sudo ufw default allow outgoing
+
+#Allow incomming on port 22, 443 and 80
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw allow 80
+
+# Enable ufw
+sudo ufw enable
+
