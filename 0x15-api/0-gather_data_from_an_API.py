@@ -4,9 +4,8 @@
 A python script that uses a REST API of a given employee ID,
 to return information about his/her TODO list progress
 '''
-
+import request
 import sys
-import requests
 
 if __name__ == "__main__":
     userId = sys.argv[1]
