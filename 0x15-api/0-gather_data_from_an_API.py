@@ -27,8 +27,8 @@ if __name__ == "__main__":
             tasks.append(i)
             taskDone += 1
 
-    print("Employee {} is done with tasks({}/{}):"
-        .format(userName, taskDone, len(todos)))
+    print("Employee {} is done with tasks({}/{}):".format(
+        userName, taskDone, len(todos)))
 
     for i in tasks:
         title = i.get("title")
