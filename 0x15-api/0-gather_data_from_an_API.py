@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 
-'''
-A python script that uses a REST API of a given employee ID,
-to return information about his/her TODO list progress
-'''
+'''A python script that uses a
+REST API of a given employee ID,
+to return information about
+his/her TODO list progress'''
+
 import requests
 import sys
+
 
 if __name__ == "__main__":
     userId = sys.argv[1]
