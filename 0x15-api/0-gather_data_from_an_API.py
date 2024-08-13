@@ -32,4 +32,4 @@ if __name__ == "__main__":
 
     for i in tasks:
         title = i.get("title")
-        print(title)
+        print("\t {}".format(title))
