@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-'''REST API return info about
-TODO list progress'''
+'''
+REST API return info about TODO list progress
+'''
 
 import requests
 import sys
