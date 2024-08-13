@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
 Script that uses employee ID of a
-REST API return info about TODO list progress
+REST API return info about todo list progress
 '''
 
 import requests
@@ -27,7 +27,7 @@ if __name__ == "__main__":
             tasks.append(i)
             taskDone += 1
 
-    print("Employee {} is done with tasks ({}/{}):"
+    print("Employee {} is done with tasks({}/{}):"
             .format(userName, taskDone, len(todos)))
 
     for i in tasks:
