@@ -4,7 +4,7 @@
 A python script that uses a REST API of a given employee ID,
 to return information about his/her TODO list progress
 '''
-import request
+import requests
 import sys
 
 if __name__ == "__main__":
