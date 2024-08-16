@@ -9,7 +9,7 @@ Issue Summary:
 -   Impact: The API service was down for 2.5 hours, affecting 80% of users. During this period, users experienced timeouts and failure in data retrieval from our platform. Both web and mobile applications could not connect to the backend, rendering the service unusable.
     
 -   Root Cause: The outage was caused by an unhandled exception in a newly deployed API endpoint, which triggered a cascading failure across multiple services.
-    
+    ![enter image description here](https://th.bing.com/th/id/R.c73021255e1a310265cd3870dbba915d?rik=3pKEB8EWgQRDVg&pid=ImgRaw&r=0)
 
 ----------
 
@@ -39,9 +39,10 @@ Issue Summary:
 ----------
 
 ### Root Cause and Resolution:
-
+![enter image description here](https://th.bing.com/th/id/R.712476c589115853abbd0400b2720126?rik=eArji6SH8orOoA&riu=http://www.expattech.com/library/malware-virus-trojan-removal.jpg&ehk=61kPhU5h0BucTOa2O5%2b34gOTcVGACwr%2bZYlf21Gjvgo=&risl=&pid=ImgRaw&r=0)
 Root Cause: The issue was traced back to a recent deployment that included an update to the API service. A new endpoint was introduced to handle bulk data requests, but it contained an unhandled exception that was not caught during testing. This exception caused the API service to crash, triggering failures in dependent services, and leading to a cascading outage.
 
+![API Fix](https://th.bing.com/th/id/OIP.TyFmvHzgeaWyt_XpuKwlzAAAAA?w=194&h=194&c=7&r=0&o=5&dpr=1.1&pid=1.7)
 Resolution: The team immediately rolled back the recent deployment once the unhandled exception was identified. The rollback restored the previous stable version of the API service, and normal functionality resumed. The team then conducted a code review and implemented a fix for the exception. The updated code was thoroughly tested and redeployed without issues.
 
 ----------
