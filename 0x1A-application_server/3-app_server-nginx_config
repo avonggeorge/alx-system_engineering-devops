@@ -2,7 +2,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    server_name ubuntu 100.26.255.248;
+    server_name 100.26.255.248;
 
     # Proxy requests to the flask app running on port 5000
     location /airbnb-onepage/ {
